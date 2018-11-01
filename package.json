@@ -1,0 +1,11 @@
+{
+  "name": "docker2",
+  "version": "1.0.0",
+  "main": "/usr/share/nginx/node/hello.js",
+  "scripts": {
+    "start": "node /usr/share/nginx/node/hello.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
