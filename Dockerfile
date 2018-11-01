@@ -1,10 +1,10 @@
 FROM node:8
 
-COPY package*.json ./
-COPY ./hello.js /usr/share/nginx/node/hello.js
+WORKDIR /usr/src/app
 
+COPY package*.json ./
 RUN npm install
 
-EXPOSE 8080
+COPY . .
 
 CMD ["npm", "start"]
