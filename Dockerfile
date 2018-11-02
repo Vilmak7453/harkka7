@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 RUN npm install mongoose
+RUN npm install async
+RUN npm install moment
 
 COPY . .
 
