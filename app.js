@@ -12,11 +12,15 @@ var app = express();
 
 //Set mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://Vilmak:wwwmongotest100@ds249623.mlab.com:49623/local_library';
+var mongoDB = 'mongodb://mongo:27017/localLibrary';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
+
+//Create data
+//var baseData = require('./populatedb');
+//baseData.createData();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
